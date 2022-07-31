@@ -6,23 +6,24 @@ Docker を用いた仮想環境にコンテナを立ちあげます。
 
 ## 2. Docker イメージの作成
 
-1. `DockerFile`があるディレクトリで docker イメージをビルドします。<br>
+1. `Dockerfile`があるディレクトリで docker イメージをビルドします。<br>
    `docker image build -t streamlit_study_img .`
 
-※ いきなりstreamlitを起動したい場合は`DockerFile`を修正してください。
+※ いきなりstreamlitを起動したい場合は`Dockerfile`を修正してください。
 
 ## 3. 開発環境立ち上げ手順
 ビルドが終わったら作ったイメージを元にコンテナを立ち上げます。<br>
 ### 3-1. コンテナ内で編集する場合
-1. 以下で、コンテナを立ち上げ、環境内に入ります。
+1. 以下で、コンテナを立ち上げ、環境内に入ります。<br>
    `docker container run --name streamlit_study_container -it -p 8501:8501 streamlit_study_img`
 
 2. Streamlitファイルを実行するには`/opt/app/src`直下で`streamlit run app.py`と実行します。
 
-3. コンテナ環境内でvimをインストールするか、VSCode等のエディタのDocker拡張機能を利用することによってPythonファイルを編集し、アプリをホットリロードすることができます。(※コンテナを切断すると編集内容はリセットされます。)
+3. コンテナ環境内でvimをインストールするか、VSCode等のエディタのDocker拡張機能を利用することによってPythonファイルを編集し、アプリをホットリロードすることができます。<br>
+(※コンテナを切断すると編集内容はリセットされます。)
 
 ### 3-2. いきなりStreamlitを立ち上げる場合
-1. 以下で、コンテナを立ち上げます。
+1. 以下で、コンテナを立ち上げます。<br>
    `docker container run --name streamlit_study_container -p 8501:8501 streamlit_study_img`
 
 2. `localhost:8501` にアクセスすると開発中のサイトにアクセスできます。
