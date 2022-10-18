@@ -2,7 +2,7 @@ FROM python:3.8
 
 COPY . /opt/app
 
-WORKDIR /opt/app/src
+WORKDIR /opt/app
 
 # VSCodeのDocker拡張を使わない場合
 # RUN apt-get update && apt-get install -y vim
@@ -14,6 +14,6 @@ EXPOSE 8501
 CMD ["bash"]
 
 # いきなりstreamlitを起動する場合はbashをコメントアウトし、以下を実行。
-# ENTRYPOINT [ "streamlit", "run"]
+ENTRYPOINT [ "streamlit", "run"]
 
-# CMD [ "app.py" ]
+CMD [ "src/app.py" ]
