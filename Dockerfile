@@ -4,9 +4,6 @@ COPY . /opt/app
 
 WORKDIR /opt/app
 
-# VSCodeのDocker拡張を使わない場合
-# RUN apt-get update && apt-get install -y vim
-
 RUN pip install streamlit
 
 EXPOSE 8501
