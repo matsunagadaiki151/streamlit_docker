@@ -32,9 +32,11 @@ Docker を用いた仮想環境にコンテナを立ちあげます。
 
 2. `localhost:8501` にアクセスすると開発中のサイトにアクセスできます。
 
-## 4. 開発環境の終了手順
+## 4. 開発環境の終了・再起動手順
 
 1. docker を動かしているターミナルで`ctrl-c`、または別のターミナルで`docker container stop streamlit_study_container`で実行中の docker のプロセスを停止する
+
+2. 再起動の際は、`docker container start streamlit_study_container`と入力する。
 
 ## 5. コンテナ、イメージの破棄（全ての開発が終わった）
 
