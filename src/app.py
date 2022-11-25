@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("サンプルアプリ")
+st.title("ああああ")
 
 ## タイトル
 st.write("こんにちは!!私の名前は{YOUR_NAME}です。")
