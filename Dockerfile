@@ -17,9 +17,9 @@ ENV GOOGLE_APPLICATION_CREDENTIALS /tmp/keys/key.json
 EXPOSE 8501
 
 # 一度bashに入りたい場合はこちらを実行
-# CMD ["bash"]
+CMD ["bash"]
 
 # いきなりstreamlitを立ち上げたいときはこちらを実行
-ENTRYPOINT [ "streamlit", "run"]
+# ENTRYPOINT [ "streamlit", "run"]
 
-CMD [ "src/app.py" ]
+# CMD [ "src/app.py" ]

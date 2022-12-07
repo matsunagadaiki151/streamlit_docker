@@ -11,7 +11,6 @@ st.title("文字検出アプリ")
 image_file = st.file_uploader("画像ファイルをアップロードしてください。", type=['png', 'jpg'])
 if image_file is not None:
     image_file_byte = image_file.read()
-    st.write(type(image_file_byte))
     image = vision.Image(content=image_file_byte)
     st.image(image_file_byte, width=500)
 
