@@ -28,7 +28,7 @@ Docker を用いた仮想環境にコンテナを立ちあげます。
 ### 3-2. いきなり Streamlit を立ち上げる場合
 
 1. 以下で、コンテナを立ち上げます。<br>
-   `streamlit-docker % docker container run --name streamlit_study_container --mount type=bind,source="$(pwd)"/src,target=/opt/app/src -p 8501:8501 -v $GOOGLE_APPLICATION_CREDENTIALS:/tmp/keys/key.json:ro streamlit_study_img`
+   `docker container run --name streamlit_study_container --mount type=bind,source="$(pwd)"/src,target=/opt/app/src -p 8501:8501 -v $GOOGLE_APPLICATION_CREDENTIALS:/tmp/keys/key.json:ro streamlit_study_img`
 
 2. `localhost:8501` にアクセスすると開発中のサイトにアクセスできます。
 
